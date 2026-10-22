@@ -107,7 +107,8 @@ if(document.getElementById('orderForm')) {
         const targetStoreWhatsApp = "918690662087"; // क्लाइंट का असली नंबर
         const messageText = `💻 *NEW LAPTOP ORDER - HYNEX TECHNOLOGY* 💻\n\n🔥 *Laptop Model:* ${selectedItem.name}\n💰 *Price:* ₹${selectedItem.price.toLocaleString('en-IN')}\n📋 *Specs:* ${selectedItem.specs}\n\n👤 *Customer Name:* ${clientName}\n📞 *Customer Phone:* ${clientPhone}\n\n⚡ _Order Network Maintained by Mayank Suite_`;
         
-        window.open(`https://wa.me{targetStoreWhatsApp}?text=${encodeURIComponent(messageText)}`, '_blank');
+        window.open(`https://wa.me/${targetStoreWhatsApp}?text=${encodeURIComponent(messageText)}`, '_blank');
+
         closeOrderModal();
     });
 }
