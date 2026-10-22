@@ -1,0 +1,78 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hynex Technology | Ultimate Laptop Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 🏮 किनारे बॉर्डर पट्टी में टेढ़े-मेढ़े अक्षरों में चमकता हुआ दुकान का नाम (Pillar Logo) -->
+    <div class="shop-border-pillar">
+        <div class="tilt-char">H</div>
+        <div class="tilt-char">Y</div>
+        <div class="tilt-char">N</div>
+        <div class="tilt-char">E</div>
+        <div class="tilt-char">X</div>
+        <div class="pillar-gap"></div>
+        <div class="tilt-char highlight">T</div>
+        <div class="tilt-char highlight">E</div>
+        <div class="tilt-char highlight">C</div>
+        <div class="tilt-char highlight">H</div>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="header-content">
+                <h1 class="main-title">⚡ HYNEX TECHNOLOGY ⚡</h1>
+                <p class="subtitle">Search & Book Premium Laptops Directly via WhatsApp</p>
+                
+                <!-- 🔍 लाइव सर्च बार ऑप्शन -->
+                <div class="search-box-wrapper">
+                    <input type="text" id="storeSearchInput" placeholder="🔍 Search by Brand or Model (e.g., dell 5400, i5, hp)..." autocomplete="off">
+                </div>
+            </div>
+        </header>
+
+        <section class="trust-strip">
+            <div class="strip-item">🔒 100% Verified Stock</div>
+            <div class="strip-item">⚡ Instant WhatsApp Booking</div>
+            <div class="strip-item">🛠️ Certified Tech Support</div>
+        </section>
+
+        <!-- 🛒 भारी इन्वेंटरी ग्रिड -->
+        <main class="laptop-grid" id="laptopGrid"></main>
+
+        <section class="about-section">
+            <h2>About Hynex Technology</h2>
+            <p>We are a premium technology aggregator providing high-performance corporate laptops, enterprise notebooks, and custom gaming setups. Find elite models from Dell, HP, Lenovo, and Apple at warehouse pricing with verified zero-intermediary direct booking.</p>
+            <div class="contact-details">
+                <p><strong>📧 Email:</strong> hynextechnology@gmail.com</p>
+                <p><strong>📞 WhatsApp Business:</strong> +91 8690662087</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Hynex Technology Inc. All Rights Reserved.</p>
+            <p class="credits-tag">⚡ Architecture Designed & Powered by Mayank (Enterprise Web Developer)</p>
+        </footer>
+    </div>
+
+    <!-- 🛎️ ऑर्डर मॉडल पॉपअप -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <h2>🛎️ Confirm Direct Store Order</h2>
+            <p id="modalLaptopDetails"></p>
+            <form id="orderForm">
+                <input type="text" id="custName" placeholder="Enter Your Full Name" required>
+                <input type="tel" id="custPhone" placeholder="Enter WhatsApp Number" required>
+                <button type="submit" class="confirm-btn">Confirm Order via WhatsApp</button>
+                <button type="button" class="close-btn" onclick="closeOrderModal()">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

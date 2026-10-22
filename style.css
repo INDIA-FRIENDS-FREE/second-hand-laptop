@@ -1,0 +1,133 @@
+ body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    margin: 0; padding: 0;
+    background-color: #020617; color: #f8fafc;
+    display: flex;
+}
+
+/* 🏮 किनारे बॉर्डर पट्टी में चमकता हुआ टेढ़ा-मेढ़ा नाम (Neon Pillar Panel) */
+.shop-border-pillar {
+    position: fixed; top: 0; left: 0;
+    width: 75px; height: 100vh;
+    background: linear-gradient(180deg, #1e3a8a, #0f172a);
+    border-right: 2px solid #00f2ff;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    z-index: 999; box-shadow: 5px 0 20px rgba(0, 242, 255, 0.25);
+    gap: 5px;
+}
+.tilt-char {
+    width: 42px; height: 42px; background: #0b132b;
+    color: #00f2ff; font-size: 22px; font-weight: 900;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 6px; border: 1px solid #00f2ff;
+    box-shadow: 0 0 10px rgba(0, 242, 255, 0.4);
+    text-shadow: 0 0 5px #00f2ff;
+}
+/* टेढ़े-मेढ़े अक्षरों का स्टाइल */
+.tilt-char:nth-child(odd) { transform: rotate(-8deg) scale(1.05); }
+.tilt-char:nth-child(even) { transform: rotate(10deg) scale(0.95); }
+.tilt-char.highlight {
+    color: #ff007f; border-color: #ff007f;
+    box-shadow: 0 0 10px rgba(255, 0, 127, 0.4);
+    text-shadow: 0 0 5px #ff007f;
+}
+.pillar-gap { height: 20px; }
+
+/* मुख्य कंटेंट रैपर */
+.main-content {
+    margin-left: 75px;
+    width: calc(100% - 75px);
+    display: flex; flex-direction: column;
+}
+
+header {
+    background: radial-gradient(circle at center, #0f172a 0%, #020617 100%);
+    padding: 40px 20px; text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.main-title {
+    margin: 0 0 10px 0; font-size: 2.5rem; font-weight: 900;
+    color: #ffffff; text-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+}
+.subtitle { margin: 0 0 25px 0; color: #94a3b8; font-size: 1.1rem; }
+
+/* 🔍 सर्च बार इनपुट डिज़ाइन */
+.search-box-wrapper { max-width: 500px; margin: 0 auto; width: 100%; }
+#storeSearchInput {
+    width: 100%; padding: 14px 25px; font-size: 16px;
+    background-color: #1e293b; color: white; border: 2px solid #38bdf8;
+    border-radius: 30px; outline: none; box-sizing: border-box;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.15);
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+#storeSearchInput:focus {
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+    border-color: #00f2ff;
+}
+
+.trust-strip {
+    background: #0b132b; padding: 15px; display: flex;
+    justify-content: center; gap: 40px; flex-wrap: wrap;
+    border-bottom: 1px solid rgba(0, 242, 255, 0.1);
+}
+.strip-item { font-size: 14px; font-weight: 600; color: #38bdf8; letter-spacing: 0.5px; }
+
+/* 🛒 ग्रिड सिस्टम */
+.laptop-grid {
+    max-width: 1200px; margin: 40px auto; padding: 0 20px;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 30px;
+    width: 100%; box-sizing: border-box;
+}
+.laptop-card {
+    background: #111827; border-radius: 16px; overflow: hidden;
+    border: 2px solid #1f2937; display: flex;
+    flex-direction: column; justify-content: space-between;
+    transition: transform 0.2s, border-color 0.2s;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+.laptop-card:hover { transform: translateY(-5px); border-color: #38bdf8; }
+
+.laptop-img-frame {
+    height: 190px; width: 100%; background: #1f2937; position: relative;
+}
+.laptop-img-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.laptop-info { padding: 22px; flex-grow: 1; display: flex; flex-direction: column; }
+.laptop-title { margin: 0 0 8px 0; font-size: 1.3rem; color: #f9fafb; font-weight: 700; }
+.laptop-specs { font-size: 13px; color: #9ca3af; line-height: 1.6; margin-bottom: 20px; flex-grow: 1; }
+.laptop-price { font-size: 1.7rem; color: #10b981; font-weight: 800; margin-bottom: 15px; }
+
+.buy-btn {
+    background: linear-gradient(135deg, #0ea5e9, #2563eb); color: white;
+    border: none; padding: 13px; font-size: 15px; font-weight: bold;
+    border-radius: 10px; width: 100%; cursor: pointer;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+.buy-btn:hover { background: linear-gradient(135deg, #38bdf8, #2563eb); }
+
+.about-section {
+    background: #111827; max-width: 1120px; margin: 50px auto 20px auto;
+    padding: 40px 25px; border-radius: 20px; text-align: center; border: 1px solid #1f2937;
+    box-sizing: border-box; width: 90%;
+}
+.about-section h2 { color: #38bdf8; margin-top: 0; font-size: 1.6rem; }
+.about-section p { color: #9ca3af; line-height: 1.6; max-width: 850px; margin: 0 auto 25px auto; font-size: 14px; }
+.contact-details p { margin: 6px 0; color: #e5e7eb; font-size: 14px; }
+
+footer { background: #030712; color: #4b5563; padding: 25px; text-align: center; font-size: 13px; margin-top: 5px; }
+.credits-tag { color: #f59e0b; font-weight: bold; margin-top: 4px; }
+
+/* 🛎️ मॉडल सेटिंग्स */
+.modal { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:99999; }
+.modal-content { background: #111827; padding: 30px; border-radius: 16px; width: 90%; max-width: 400px; text-align: center; border: 2px solid #38bdf8; color: white; }
+.modal-content h2 { margin-top: 0; color: #38bdf8; font-size: 1.5rem; }
+.modal-content input { width: 100%; padding: 13px; margin: 12px 0; border: 1px solid #374151; background: #030712; color: white; border-radius: 8px; box-sizing: border-box; font-size: 15px; outline: none; }
+.modal-content input:focus { border-color: #38bdf8; }
+.confirm-btn { background: #10b981; color: #020617; border: none; padding: 13px; font-weight: bold; border-radius: 8px; width:100%; cursor:pointer; font-size:16px; margin-top: 10px; }
+.close-btn { background: #374151; color: #d1d5db; border: none; padding: 9px; border-radius: 8px; width:100%; margin-top: 10px; cursor:pointer; }
+
+@media (max-width: 768px) {
+    .shop-border-pillar { display: none; }
+    .main-content { margin-left: 0; width: 100%; }
+}
